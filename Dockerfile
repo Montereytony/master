@@ -26,8 +26,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends ap
     apt-get clean  
 
 
-RUN Rscript -e 'install.packages(c("RcppEigen", "StanHeaders", "rpf"),repos = "https://cloud.r-project.org",dependencies = TRUE)'
-RUN Rscript -e 'install.packages(c("https://cran.r-project.org/src/contrib/OpenMx_2.9.9.tar.gz"),dependencies = TRUE)'
+RUN Rscript -e 'install.packages(c("RcppEigen", "StanHeaders", "rpf","OpenMx"),repos = "https://cloud.r-project.org",dependencies = TRUE)'
+#RUN Rscript -e 'install.packages(c("https://cran.r-project.org/src/contrib/OpenMx_2.9.9.tar.gz"),dependencies = TRUE)'
 RUN conda install \
         gcc_linux-64 \
         gfortran_linux-64 \
